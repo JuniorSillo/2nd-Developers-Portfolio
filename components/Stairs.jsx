@@ -1,45 +1,40 @@
+"use client";
+
 import { motion } from "framer-motion";
 
-const stairAnimation = {
-  initial: {
-    top: "0%",
-  },
-  animate: {
-    top: "100%",
-  },
-  exit: {
-    top: "0%", // Ensure consistency
-  },
-};
+const STEPS = 8;
+const COLORS = [
+  "#e879f9","#d946ef","#c026d3","#a21caf",
+  "#7c3aed","#6d28d9","#4c1d95","#3b0764",
+];
 
-const reverseIndex = (index, totalSteps) => totalSteps - index - 1;
-
-const Stairs = () => {
-  const totalSteps = 6;
-
+function Stairs() {
   return (
-    <div className="relative w-full h-full overflow-hidden">
-      {[...Array(totalSteps)].map((_, index) => (
-        <motion.div
-          key={index}
-          variants={stairAnimation}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          transition={{
-            duration: 0.4,
-            ease: "easeInOut",
-            delay: reverseIndex(index, totalSteps) * 0.1, // Stagger delay
-          }}
-          className={`absolute w-full h-[20px] bg-white`}
-          style={{
-            top: `${index * 20}px`, // Stagger positioning for visibility
-            zIndex: reverseIndex(index, totalSteps), // Ensure proper layering
-          }}
-        />
-      ))}
-    </div>
+    <>
+      {[...Array(STEPS)].map((_, index) => {
+        const delay = (STEPS - index - 1) * 0.05;
+        return (
+          <motion.div
+            key={index}
+            initial={{ scaleX: 1 }}
+            animate={{
+              scaleX: 0,
+              transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1], delay },
+            }}
+            style={{
+              position: "absolute",
+              width: "100%",
+              height: `${100 / STEPS}%`,
+              top: `${(index / STEPS) * 100}%`,
+              background: COLORS[index],
+              transformOrigin: "right center",
+              zIndex: STEPS - index,
+            }}
+          />
+        );
+      })}
+    </>
   );
-};
+}
 
 export default Stairs;
