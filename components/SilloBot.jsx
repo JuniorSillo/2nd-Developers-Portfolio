@@ -659,8 +659,10 @@ export default function SilloBot() {
 
               <div className="mt-2 flex items-center justify-between px-1 text-[10px] text-white/30">
                 <span>Rule-based portfolio assistant</span>
-                <span>No API needed</span>
+                <span>{messages.length} messages</span>
+                
               </div>
+              
             </div>
           </motion.div>
         )}
