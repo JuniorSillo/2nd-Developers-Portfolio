@@ -11,7 +11,7 @@ import { useScrollAnimation, fadeUp, fadeLeft, staggerChildren } from "@/lib/use
 
 const about = {
   title: "About Me",
-  description: `I'm a passionate Full-Stack Developer from South Africa with 5+ years of hands-on experience building modern web applications. I thrive at the intersection of clean code and compelling design — crafting digital products that are both technically robust and user-friendly.`,
+  description: `I'm a passionate Full-Stack Developer from South Africa with 6+ years of hands-on experience building modern web applications. I thrive at the intersection of clean code and compelling design — crafting digital products that are both technically robust and user-friendly.`,
   info: [
     { fieldName: "Name", fieldValue: "Moeketsi Junior Sillo" },
     { fieldName: "Email", fieldValue: "sillojunior8@gmail.com" },
@@ -26,9 +26,9 @@ const about = {
 
 const experience = {
   title: "Experience",
-  description: "From industry leadership programmes to freelance builds — real-world experience across the full stack.",
+  description: "From industry trainee programmes to freelance builds — real-world experience across the full stack.",
   items: [
-    { company: "Bitcube", position: "Software Developer Leadership Programme", period: "Jan 2026 – May 2026", details: "Selected for Bitcube's competitive Leadership Programme. Working across Mobile Development (React Native & Flutter), Shopify e-commerce, and Full-Stack web solutions in a professional team environment.", badge: "Current" },
+    { company: "Bitcube", position: "Software Developer Trainee Programme", period: "Jan 2026 – May 2026", details: "Selected for Bitcube's competitive Trainee Programme. Working across Mobile Development (React Native & Flutter), Shopify e-commerce, and Full-Stack web solutions in a professional team environment.", badge: "Current" },
     { company: "Freelance", position: "Full-Stack Developer", period: "2022 – Present", details: "Built multiple client-facing applications including an AI Resume Builder, Food Delivery platform, and Spotify Clone using React, Next.js, and Node.js." },
     { company: "Personal Projects", position: "Frontend Developer", period: "2021 – 2022", details: "Built a portfolio site, hotel booking UI, and Spotify-inspired player using React and Tailwind CSS." },
     { company: "Self-Learning", position: "Full-Stack Trainee", period: "2020 – 2021", details: "Completed 500+ hours of structured training across JavaScript, React, Node.js, and database management." },
